@@ -20,3 +20,4 @@ class User(BaseModel, Base):
                        nullable=True)
     places = relationship("Place", cascade="delete", backref="user")
     reviews = relationship("Review", cascade="delete", backref="user")
+
