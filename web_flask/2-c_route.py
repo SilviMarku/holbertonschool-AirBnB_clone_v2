@@ -32,21 +32,19 @@ def c(text):
     Dynamic routing
     """
     text = text.replace("_", " ")
-    return "C" + text
+    return "C " + text
 
 
 @app.route('/python/')
 @app.route("/python/<text>", strict_slashes=False)
-def python(text=' is cool'):
+def python(text='is cool'):
     """
     Dynamic routing
     """
     if text:
-        return "Python" + text.replace("_", " ")
-    return "Python" + text
+        return "Python " + text.replace("_", " ")
+    return "Python " + text
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
