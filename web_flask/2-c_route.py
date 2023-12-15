@@ -37,7 +37,7 @@ def c(text):
 
 @app.route('/python/')
 @app.route("/python/<text>", strict_slashes=False)
-def python(text='is cool'):
+def python(text=' is cool'):
     """
     Dynamic routing
     """
@@ -48,4 +48,5 @@ def python(text='is cool'):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
