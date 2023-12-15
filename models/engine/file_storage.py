@@ -65,3 +65,4 @@ class FileStorage:
         Stupid function
         """
         self.reload()
+
