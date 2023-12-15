@@ -8,7 +8,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
+@app.route("/")
 def index():
     """
     Index route
@@ -33,17 +33,6 @@ def c(text):
     """
     text = text.replace("_", " ")
     return "C " + text
-
-
-@app.route('/python/')
-@app.route("/python/<text>", strict_slashes=False)
-def python(text='is cool'):
-    """
-    Dynamic routing
-    """
-    if text:
-        return "Python " + text.replace("_", " ")
-    return "Python " + text
 
 
 if __name__ == "__main__":
